@@ -1,0 +1,23 @@
+{
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "chai": "^4.3.4",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.3.1",
+    "hardhat": "^2.4.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^2.5.1",
+    "browserify": "^17.0.0",
+    "buffer": "^5.7.1",
+    "dotenv": "^10.0.0",
+    "erc-payable-token": "^4.1.1",
+    "ipfs-api": "^26.1.2",
+    "ipfs-http-client": "^50.1.2",
+    "node.js": "^0.0.1-security",
+    "ramda": "^0.27.1",
+    "requirejs": "^2.3.6",
+    "zeppelin": "^0.0.3"
+  }
+}

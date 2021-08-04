@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.83.1">
+    <title>Post Property - Review</title>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+  <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script type="module" src="js/app.js"></script>
+    <script src="https://unpkg.com/ipfs-http-client/dist/index.min.js"></script>
+ 
+    <script src="./js/buffer.js"></script>
+    <script charset="utf-8"
+    src="https://cdn.ethers.io/scripts/ethers-v4.min.js"
+    type="text/javascript">
+  </script> 
+    <!-- Bootstrap core CSS -->
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  
+  </head>
+  <body>
+    
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" style="color:green;"><b>WISER</b></a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="post_property.html">Post Property</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="purchase_property.html">Purchase Property</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="member.html">Members</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="other_services.html">Other Services</a>
+          </li>
+
+          
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Information
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+			  <li><a class="dropdown-item" href="know_calculator.html">Purchaser - Know how much you can afford</a></li>
+			  <li><a class="dropdown-item" href="https://www.hdb.gov.sg/cs/infoweb/residential/buying-a-flat/resale/financing/financing-your-flat-purchase">Purchaser - Budgeting for your HDB flat purchase</a></li>
+              <li><a class="dropdown-item" href="https://blog.moneysmart.sg/property/condo-downpayment-singapore">Purchaser - Budgeting for your Condominium purchase</a></li>
+              <li><a class="dropdown-item" href="https://www.moneysense.gov.sg/financial-tools/mortgage-calculator">Purchaser - Loan calculator</a></li>
+              <li><a class="dropdown-item" href="https://www.moneysmart.sg/home-loan/property-valuation-calculator">Seller - Property valuation tool</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+     
+    </div>
+    <div class="carousel-inner">
+       <div class="carousel-item active">
+             
+       
+       <svg class="bd-placeholder-img" width="100%" height="60%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+       <img src ="images\ymphoto\Blur-Picture.jpg">
+       <div class="container">
+      <div class="carousel-caption text-start">
+
+        <h1>Review your Property Details</h1>
+
+
+
+
+<br>
+
+       </div>
+        </div>
+      </div>
+      
+    </div>
+   
+  </div>
+
+
+
+<!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+      <p>Please review and confirm your property details.</p> 
+       
+      <form action="post_confirm_page.html" method="GET" onsubmit="return false;">
+        
+    <center>		<form  class="text-center">
+        
+          <table>
+            <tr>
+              <td><label for="sellername">Seller Name (as per NRIC/FIN):</label></td>
+              <td><type="text" id="sellername" name="sellername")></td>
+            </tr>
+			
+			<tr>
+              <td><label for="nricfin">NRIC/FIN:</label></td>
+              <td><type="text" id="nricfin" name="nricfin")></td>
+            </tr>
+			
+			<tr>
+              <td><label for="email">Email Address:</label></td>
+              <td><type="text" id="email" name="email")></td>
+            </tr>
+            
+			<tr>
+              <td><label for="contact">Contact Number:</label></td>
+              <td><type="number" id="contact" name="contact"></td>
+            </tr>
+            
+			<tr>
+              <td><label for="proptype">Property Type:</label></td> 
+			  <td><type="text" id="proptype" name="proptype"></td>
+            </tr>
+			
+			<tr>
+              <td><label for="propaddr">Property Address:</label></td>
+              <td><type="text" id="propaddr" name="propaddr"></td>
+            </tr>
+            
+			<tr>
+              <td><label for="postal">Postal Code:</label></td>
+              <td> <type="text" id="postal" name="postal"></td>
+            </tr>
+           			
+			<tr>
+              <td><label for="city">City:</label></td>
+              <td> <type="text" id="city" name="city"></td>
+            </tr>
+            
+			<tr>               
+			  <td><label for="bedroom">Bedroom Type:</label></td> 
+			  <td><type="text" id="bedroom" name="bedroom"></td>   
+			</tr>
+				
+			<tr>
+			  <td><label for="size">Floor Size (sqft):</label></td>
+			  <td> <type="number" id="size" name="size"></td>
+            </tr>
+
+            <tr>
+              <td><label for="tenure">Tenure (yrs):</label></td>
+              <td> <type="text" id="tenure" name="tenure"></td>
+            </tr>
+			
+            <tr>
+              <td><label for="price">Selling Price:</label></td>
+              <td><type="text" id="price" name="price"></td>
+            </tr>
+			
+		    <tr>
+              <td><label for="lawyer">Lawyer:</label></td>
+			  <td><type="text" id="lawyer" name="lawyer"></td>
+            </tr>
+		
+           </table>
+
+           <br>
+           <tr>
+             <center>
+            <br>
+            <div id ="previewpic">
+			<img  accept="image/*" name="image"  id="myfile1" name="myfile1" width="350" height="300">
+			<img src="" id="myfile2" name="myfile2" width="350" height="300">
+			<img src="" id="myfile3" name="myfile3" width="350" height="300">
+		</div>
+    </center>
+			<br><br>  
+		   </tr> 
+        
+   		 <br><br> 
+		 <input type="button" class="myButton" onclick="history.back()" value="Edit">
+		 <input type="submit" class="myButton" value="Confirm" id="addPropfromreview">
+         <br><br>
+          
+         <br><br>
+           
+        </form></center>
+		
+		 <br><br> 
+
+
+<script language="JavaScript">
+  function processUser()
+  {
+    var parameters = location.search.substring(1).split("&");
+
+    var temp = parameters[0].split("=");
+    input01 = unescape(temp[1]);
+	var input01formatted = input01.split('+').join(' ');
+	document.getElementById("sellername").innerHTML = input01formatted;
+	temp = parameters[1].split("=");
+    input02 = unescape(temp[1]);
+	document.getElementById("nricfin").innerHTML = input02;
+
+    var temp = parameters[2].split("=");
+    input03 = unescape(temp[1]);
+	document.getElementById("email").innerHTML = input03;
+	temp = parameters[3].split("=");
+    input04 = unescape(temp[1]);
+	document.getElementById("contact").innerHTML = input04;
+	temp = parameters[4].split("=");
+    input05 = unescape(temp[1]);
+	let proptype=["HDB", "Condo", "Landed House"];
+	document.getElementById("proptype").innerHTML = proptype[Number(input05)];
+  document.getElementById("proptype").value =input05;
+	temp = parameters[5].split("=");
+    input06 = unescape(temp[1]);
+	var input06formatted = input06.split('+').join(' ');
+	document.getElementById("propaddr").innerHTML = input06formatted;
+	temp = parameters[6].split("=");
+    input07 = unescape(temp[1]);
+	document.getElementById("postal").innerHTML = input07;
+	temp = parameters[7].split("=");
+    input08 = unescape(temp[1]);
+	document.getElementById("city").innerHTML = input08;
+	temp = parameters[8].split("=");
+    input09 = unescape(temp[1]);
+	let accotype=["Studio", "1B1T", "2B1T", "3B2T", "4B3T"];
+	document.getElementById("bedroom").innerHTML = accotype[Number(input09)-1];
+  document.getElementById("bedroom").value = input09;
+	temp = parameters[9].split("=");
+    input10 = unescape(temp[1]);
+	document.getElementById("size").innerHTML = input10;
+	temp = parameters[10].split("=");
+    input11 = unescape(temp[1]);
+	document.getElementById("tenure").innerHTML = input11;
+	temp = parameters[11].split("=");
+    input12= unescape(temp[1]);
+	document.getElementById("price").innerHTML = input12;
+	temp = parameters[12].split("=");
+    input13 = unescape(temp[1]);
+	var input13formatted = input13.split('+').join(' ');
+	document.getElementById("lawyer").name = input13formatted;
+  document.getElementById("lawyer").innerHTML = input13formatted.split(" ")[2];
+  }
+  processUser();
+
+ </script>     
+
+   <br><br>
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>&copy; 2021 WISER &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>
+</main>
+
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <style>
+
+    .myButton {
+      box-shadow: 0px 0px 0px 2px #9fb4f2;
+      background:linear-gradient(to bottom, #7892c2 5%, #476e9e 60%);
+      background-color:#7892c2;
+      border-radius:8px;
+      border:1px solid #4e6096;
+      display:inline-block;
+      cursor:pointer;
+      color:#ffffff;
+      font-family:Arial;
+      font-size:15px;
+      padding:12px 37px;
+      text-decoration:none;
+      text-shadow:0px 1px 0px #283966;
+    }
+    .myButton:hover {
+      background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+      background-color:#476e9e;
+    }
+    .myButton:active {
+      position:relative;
+      top:1px;
+    }
+       </style>
+ 
+   
+      
+      
+  </body>
+</html>
