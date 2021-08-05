@@ -37,6 +37,7 @@ ShowItemDetails();
   var offername =blkoffer.split("%")[1];
   var offerphone =blkoffer.split("%")[2];
   var offeremail =blkoffer.split("%")[3];
+  var offercomm = blkoffer.split("%")[4];
   var ucontactnumber = blkentry.split("%")[1];
   var tenure = blkentry.split("%")[3];
   var url1 = blkentry.split("%")[4];
@@ -52,14 +53,14 @@ ShowItemDetails();
   var strDet2 =document.getElementById("note").innerHTML;
   var strDet1 =document.getElementById("carouselExampleFade").innerHTML;
   
-  document.getElementById("datatable").innerHTML=strDet.replace("yyy",proptypes[PropType]).replace("xxx",PropAddress).replace("zzz","D"+district).replace("uuu",Pin).replace("hhh",price).replace("aaa",accotype[acco-1]).replace("bbb",area).replace("ccc",tenure).replace("qqq",offername).replace("ttt",offerpx).replace("sss",offerphone).replace("mmm",offeremail).replace("fff",unric);
+  document.getElementById("datatable").innerHTML=strDet.replace("yyy",proptypes[PropType]).replace("xxx",PropAddress).replace("zzz","D"+district).replace("uuu",Pin).replace("hhh",price).replace("aaa",accotype[acco-1]).replace("bbb",area).replace("ccc",tenure).replace("qqq",offername).replace("ttt",offerpx).replace("sss",offerphone).replace("mmm",offeremail).replace("fff",unric).replace("rrr",offercomm);
   if (d1==0)
    document.getElementById("note").innerHTML="";
   else
     document.getElementById("note").innerHTML=strDet2.replace("jjj",otpdate).replace("kkk",finaldate);
   document.getElementById("carouselExampleFade").innerHTML =strDet1.replace("ddd",url1).replace("eee",url2).replace("fff",url3);
 
-  if (Number(blkoffer.split("%")[0])==Number(FullDetails[i].Price))
+  if (Number(blkoffer.split("%")[0])==0)
   document.getElementById("row1").innerHTML="";
   if (Number(offername)==0)
   document.getElementById("row2").innerHTML="";
@@ -67,7 +68,8 @@ ShowItemDetails();
   document.getElementById("row3").innerHTML="";
   if (Number(offeremail)==0)
   document.getElementById("row4").innerHTML="";
-  
+  if (offercomm=="")
+  document.getElementById("row5").innerHTML="";
   if( WalletAdd!=lawyerAdd)
     document.getElementById("row0").innerHTML="";
   if(!(state==1 && WalletAdd==SellerAdd)){
@@ -75,5 +77,6 @@ ShowItemDetails();
     document.getElementById("row2").innerHTML="";
     document.getElementById("row3").innerHTML="";
     document.getElementById("row4").innerHTML="";
+    document.getElementById("row5").innerHTML="";
 }
 }

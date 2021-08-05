@@ -14,7 +14,7 @@ var account = 0;
 var Token1=0;
 async function main() {
   // 0xF6258304D8D4e798b9AeB47BE63Fc57687F2B7B4
-  const contractName = "0x22E05704e094FDbAD598E901A1f3570ba2742ea4"   //property contract
+  const contractName = "0xf510aec70650E6E14FA0fE0688DE3bA723Bb68D4"   //property contract
   const TokenName = "0x1484a6020A0F08400F6f56715016d2C80e26cDC1" // USDT contract on Metamask, same as contract
   try{
     const provider = await new ethers.providers.Web3Provider(window.ethereum);
@@ -231,8 +231,8 @@ export const getPropState=async(Index) => {
   const result = (await contract.getInstanceState(Index)).toNumber()
     return result ;  
 };
-export const ShowInterest=async(index,blkoffer) => {
-   await contract.buyerShowsInterest(index,blkoffer);
+export const ShowInterest=async(index,blkoffer,offerpx) => {
+   await contract.buyerShowsInterest(index,blkoffer,offerpx);
   
 };
 

@@ -206,11 +206,11 @@ event ShowIterest(address indexed _from,  uint _index, uint _value);
   }
 
   
-  function buyerShowsInterest(uint index, string memory blkoffer ) public payable
+  function buyerShowsInterest(uint index, string memory blkoffer , uint offerpx) public payable
 {
     require(index < contracts.length, "index out of range");
     HomeTransaction instance = contracts[index];
-   instance.buyerShowsInterest(msg.sender,blkoffer );
+   instance.buyerShowsInterest(msg.sender,blkoffer,offerpx );
    emit ShowIterest(msg.sender,index,1);
 }
 function sellerSignContract(uint index) public payable

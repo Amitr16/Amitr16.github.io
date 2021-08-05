@@ -32,10 +32,26 @@ ShowItemDetails();
   var url3 = blkentry.split("%")[6];
   console.log(PropAddress);
   var strDet=document.getElementById("datatable").innerHTML;
- 
+  var strDet2 =document.getElementById("mybtn").innerHTML;
+
   var strDet1 =document.getElementById("carouselExampleFade").innerHTML;
  
   document.getElementById("datatable").innerHTML=strDet.replace("yyy",proptypes[PropType]).replace("xxx",PropAddress).replace("zzz","D"+district).replace("uuu",Pin).replace("hhh",price).replace("aaa",accotype[acco-1]).replace("bbb",area).replace("ccc",tenure);
   document.getElementById("carouselExampleFade").innerHTML =strDet1.replace("ddd",url1).replace("eee",url2).replace("fff",url3);
-  document.getElementById("interestbutton").onclick=function(){window.ShowInterest(i)};
+  document.getElementById("mybtn").innerHTML=strDet2.replace("kkk",i);
+
+}
+
+window.SendMsg = async function(index)
+{
+
+var email =document.getElementById("form_email").value;
+var offerpx =document.getElementById("form_offer").value;
+var mobile=document.getElementById("form_mobile").value;
+var name =document.getElementById("form_name").value;
+var comm = document.getElementById("form_view").value;
+var blkoffer = offerpx+"%"+name+"%"+mobile+"%"+email+"%"+comm;
+// alert(blkoffer);
+await App.ShowInterest(index,blkoffer,offerpx);
+window.location.href = "purchase_property.html";
 }

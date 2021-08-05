@@ -191,11 +191,12 @@ for (var i=0; i<await App.GetPropCount() ;i++){
 window.ShowInterest = async function(index)
 {
   var FullDetails = JSON.parse(localStorage.getItem('FullProp'));
-  var offerpx = Number(FullDetails[index].Price);
+  var offerpx =0;
   var name = 0;
   var mobile =0;
   var email=0;
-  var blkoffer = offerpx+"%"+name+"%"+mobile+"%"+email;
-  await App.ShowInterest(index,blkoffer);
+  var comments ="";
+  var blkoffer = offerpx+"%"+name+"%"+mobile+"%"+email+"%"+comments;
+  await App.ShowInterest(index,blkoffer,offerpx);
   window.location.href = "purchase_property.html";
 }

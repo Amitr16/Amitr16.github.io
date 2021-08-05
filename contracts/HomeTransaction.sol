@@ -80,7 +80,7 @@ contract HomeTransaction {
         
     }
 
-       function buyerShowsInterest(address addbuy ,string memory blockkoffer) public  {
+       function buyerShowsInterest(address addbuy ,string memory blockkoffer, uint offerpx) public  {
         
 
         require(contractState == ContractState.WaitingBuyerInterest, "Wrong contract state");
@@ -88,6 +88,7 @@ contract HomeTransaction {
         contractState = ContractState.WaitingSellerSignature;
         buyer=addbuy; //setting buyer address
         blkoffer=blockkoffer;
+        offerprice = offerpx;
         lastOperationTime=now;
     }
     function sellerSignContract() public payable {
@@ -97,6 +98,9 @@ contract HomeTransaction {
 
         contractState = ContractState.WaitingBuyerSignature;
         lastOperationTime=now;
+        if(offerprice>0){
+            price = offerprice;
+        }
     }
 
     function buyerSignContractAndPayDeposit() public  {
@@ -207,6 +211,8 @@ contract HomeTransaction {
     contractState = ContractState.WaitingBuyerInterest;
      finalizeDeadline = now;
         OTPDeadline =0;
+    blkoffer="0%0%0%0%";
+    offerprice=0;
      lastOperationTime=now;
     }
 }
