@@ -25,7 +25,7 @@ var detaillen =0;
 
 for (var i=0; i<await App.GetPropCount() ;i++){
 
-console.log(FullDetails);
+// console.log(FullDetails);
 
 if(FullDetails!=null){
   detaillen=FullDetails.length;
@@ -48,7 +48,8 @@ catch (e){
 }
   var locout = await App.getPropAddress(i);
   var pin =await App.getPropZIP(i);
-
+  console.log(pin);
+  console.log(PropType);
   var firsttwo =String(pin).slice(0,2);
   var  district = DistID[firsttwo-1];
   // var lastupdate=await App.getLastOpsTime(i);
@@ -81,7 +82,7 @@ else{
   // var lastupdate=await App.getLastOpsTime(i);
   
   // var lastdate= new Date(lastupdate*1000);
-  var firsttwo =String(FullDetails[i].Pin).slice(2);
+  var firsttwo =String(FullDetails[i].Pin).slice(0,2);
   var  district = DistID[firsttwo-1];
   var blockentry= FullDetails[i].blockentry;
   var otpdate=FullDetails[i].otpdate;
@@ -91,6 +92,8 @@ else{
   var area =Number(FullDetails[i].Area);
   var area1 =numberWithCommas(area);
   var acco = FullDetails[i].Acco;
+  console.log(FullDetails[i].Pin);
+  console.log(district);
   var psf = price/area;
   var url = blockentry.split("%")[4];
 // console.log(i);
@@ -188,15 +191,30 @@ for (var i=0; i<await App.GetPropCount() ;i++){
 
 
 }
+// window.ShowInterest = async function(index)
+// {
+//   var FullDetails = JSON.parse(localStorage.getItem('FullProp'));
+//   var offerpx =0;
+//   var name = 0;
+//   var mobile =0;
+//   var email=0;
+//   var comments ="";
+//   var blkoffer = offerpx+"%"+name+"%"+mobile+"%"+email+"%"+comments;
+//   await App.ShowInterest(index,blkoffer,offerpx);
+//   window.location.href = "purchase_property.html";
+// }
+
 window.ShowInterest = async function(index)
 {
-  var FullDetails = JSON.parse(localStorage.getItem('FullProp'));
-  var offerpx =0;
-  var name = 0;
-  var mobile =0;
-  var email=0;
-  var comments ="";
-  var blkoffer = offerpx+"%"+name+"%"+mobile+"%"+email+"%"+comments;
-  await App.ShowInterest(index,blkoffer,offerpx);
-  window.location.href = "purchase_property.html";
+
+var email =document.getElementById("form_email").value;
+var offerpx =document.getElementById("form_offer").value;
+var mobile=document.getElementById("form_mobile").value;
+var name =document.getElementById("form_name").value;
+// var comm = document.getElementById("form_view").value;
+var comm ="";
+var blkoffer = offerpx+"%"+name+"%"+mobile+"%"+email+"%"+comm;
+// alert(blkoffer);
+await App.ShowInterest(index,blkoffer,offerpx);
+window.location.href = "purchase_property.html";
 }

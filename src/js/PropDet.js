@@ -44,14 +44,5 @@ ShowItemDetails();
 
 window.SendMsg = async function(index)
 {
-
-var email =document.getElementById("form_email").value;
-var offerpx =document.getElementById("form_offer").value;
-var mobile=document.getElementById("form_mobile").value;
-var name =document.getElementById("form_name").value;
-var comm = document.getElementById("form_view").value;
-var blkoffer = offerpx+"%"+name+"%"+mobile+"%"+email+"%"+comm;
-// alert(blkoffer);
-await App.ShowInterest(index,blkoffer,offerpx);
 window.location.href = "purchase_property.html";
 }

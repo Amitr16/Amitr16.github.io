@@ -28,9 +28,7 @@ async function ShowPropDetails(){
 for (var i=0; i<await App.GetPropCount() ;i++){
 
   var state = await App.getPropState(i);
-  console.log(i);
-  console.log(state);
-
+  
   var arrStatus=["Awaiting Interest","Awaiting Seller Signature","Awaiting Buyer Deposit","Awaiting OTP Exercise and payment","Awaiting review by Lawyer","Awaiting Final payment and closure","Deal Finalized"];
   
  
@@ -53,7 +51,7 @@ for (var i=0; i<await App.GetPropCount() ;i++){
   var area1 =numberWithCommas( area);
 
   var acco = await App.getInstanceAcco(i);
-  console.log(blockentry);
+  
   var WalletAdd=await App.GetWalletAccount();
   var SellerAdd=await App.getPropSellerAddress(i);
   var BuyerAdd=await App.getPropBuyerAddress(i);
@@ -95,7 +93,7 @@ for (var i=0; i<await App.GetPropCount() ;i++){
     else{
       strseller+=document.getElementById("myfields").innerHTML.replace("bbb",arrStatus[state]).replace("ccc",locout).replace("ddd",pin).replace("eee",proptypes[PropType]).replace("jjj",url).replaceAll("xxx",i).replaceAll("yyy",state).replaceAll("sss",rejection);
     }
-    console.log(strseller);
+    
   }
   if(lawyerAdd==WalletAdd){
     if (state <5 && state>1)
