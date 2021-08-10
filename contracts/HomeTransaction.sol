@@ -71,7 +71,7 @@ contract HomeTransaction {
         proparea =_proparea;
         blockentry=_blockentry;
         seller = _seller;
-        buyer = _buyer;
+        buyer = msg.sender;
         homeAddress = _address;
         InstAddress=address(this);
         zip = _zip;
