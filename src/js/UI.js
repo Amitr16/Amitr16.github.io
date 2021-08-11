@@ -105,7 +105,7 @@ else{
 
 }
     document.getElementById("PropDet").innerHTML+= strDet.replace("xxx",locout).replace("yyy",district).replace("zzz",price1).replace("aaa",accotype[acco-1]).replace("bbb",area1).replace("ccc",psf).replace("ddd",i).replace("jjj",url).replace("ppp",i).replace("nnn",proptypes[PropType]);
-  
+    // console.log(document.getElementById("PropDet").innerHTML)
 
 }
 
@@ -183,7 +183,7 @@ for (var i=0; i<await App.GetPropCount() ;i++){
   var url = blockentry.split("%")[4];
   // console.log(document.getElementById("PropDet").innerHTML);
     document.getElementById("PropDet").innerHTML+= strDet1.replace("xxx",locout).replace("yyy",district).replace("zzz",px).replace("aaa",accotype[acco-1]).replace("bbb",area).replace("ccc",psf).replace("ddd",i).replace("jjj",url).replace("ppp",i).replace("nnn",proptypes[PropType]);
-
+    console.log(strDet1);
 
 }
 
@@ -219,6 +219,6 @@ console.log(name)
 var comm ="";
 var blkoffer = offerpx+"%"+name+"%"+mobile+"%"+email+"%"+comm;
 // alert(blkoffer);
-await App.ShowInterest(index,blkoffer,offerpx);
+await App.ShowInterest(index+1,blkoffer,offerpx);
 window.location.href = "purchase_property.html";
 }
