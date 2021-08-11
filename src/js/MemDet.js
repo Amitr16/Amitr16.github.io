@@ -14,7 +14,7 @@ ShowItemDetails();
   let proptypes=['HDB','Condo','Landed'];
   var DistID = ["01","01","01","01","01","02","02","02","04","04","05","05","05","03","03","03","06","07","07","08","08","09","09","10","10","10","10","11","11","11","12","12","12","13","13","13","13","14","14","14","14","15","15","15","15","16","16","16","17","17","18","18","19","19","19","20","20","21","21","22","22","22","22","22","23","23","23","23","24","24","24","25","25","25","27","27","26","26","28","28","17","19"];
  
-  var state = FullDetails[i].State;
+  var state = await App.getPropState(i);
  
   var PropType =FullDetails[i].PropType;
   var firsttwo =String(FullDetails[i].Pin).slice(0,2);
@@ -33,7 +33,9 @@ ShowItemDetails();
   var BuyerAdd=await App.getPropBuyerAddress(i);
   var lawyerAdd=await App.getPropAgentAddress(i);
   var blkoffer = await App.getInstanceBlockoffer(i);
+  console.log(blkoffer);
   var offerpx =numberWithCommas(blkoffer.split("%")[0]);
+    
   var offername =blkoffer.split("%")[1];
   var offerphone =blkoffer.split("%")[2];
   var offeremail =blkoffer.split("%")[3];
@@ -73,6 +75,7 @@ ShowItemDetails();
   document.getElementById("row5").innerHTML="";
   if( WalletAdd!=lawyerAdd)
     document.getElementById("row0").innerHTML="";
+
   if(!(state==1 && WalletAdd==SellerAdd)){
     document.getElementById("row1").innerHTML="";
     document.getElementById("row2").innerHTML="";
