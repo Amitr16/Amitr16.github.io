@@ -222,3 +222,7 @@ var blkoffer = offerpx+"%"+name+"%"+mobile+"%"+email+"%"+comm;
 await App.ShowInterest(index+1,blkoffer,offerpx);
 window.location.href = "purchase_property.html";
 }
+$("body").keypress(function(e){
+  if(e.which==114)
+   cleancache();
+})
