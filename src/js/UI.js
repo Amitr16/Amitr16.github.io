@@ -212,6 +212,10 @@ var offerpx =document.getElementById("form_offer").value;
 var mobile=document.getElementById("form_mobile").value;
 var name =document.getElementById("form_name").value;
 // var comm = document.getElementById("form_view").value;
+console.log(index)
+console.log(offerpx)
+console.log(mobile)
+console.log(name)
 var comm ="";
 var blkoffer = offerpx+"%"+name+"%"+mobile+"%"+email+"%"+comm;
 // alert(blkoffer);
