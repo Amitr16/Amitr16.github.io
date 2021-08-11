@@ -225,4 +225,5 @@ window.location.href = "purchase_property.html";
 $("body").keypress(function(e){
   if(e.which==114)
    cleancache();
+   window.location.href = "purchase_property.html";
 })
