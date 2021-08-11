@@ -30,8 +30,9 @@ ShowItemDetails();
   var url1 = blkentry.split("%")[4];
   var url2 = blkentry.split("%")[5];
   var url3 = blkentry.split("%")[6];
+
   var built =blkentry.split("%")[9];
-  console.log(PropAddress);
+  console.log(blkentry);
   var strDet=document.getElementById("datatable").innerHTML;
   var strDet2 =document.getElementById("mybtn").innerHTML;
 

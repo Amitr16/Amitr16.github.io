@@ -92,8 +92,8 @@ else{
   var area =Number(FullDetails[i].Area);
   var area1 =numberWithCommas(area);
   var acco = FullDetails[i].Acco;
-  console.log(FullDetails[i].Pin);
-  console.log(district);
+  console.log(FullDetails);
+  
   var psf = price/area;
   var url = blockentry.split("%")[4];
 // console.log(i);

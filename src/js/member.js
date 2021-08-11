@@ -25,9 +25,10 @@ async function ShowPropDetails(){
  var lenlawyer=0;
 
 
-for (var i=0; i<await App.GetPropCount() ;i++){
+for (var i=13; i<await App.GetPropCount() ;i++){
 
   var state = await App.getPropState(i);
+  console.log(state)
   
   var arrStatus=["Awaiting Interest","Awaiting Seller Signature","Awaiting Buyer Deposit","Awaiting OTP Exercise and payment","Awaiting review by Lawyer","Awaiting Final payment and closure","Deal Finalized"];
   
@@ -44,7 +45,7 @@ for (var i=0; i<await App.GetPropCount() ;i++){
   
   // var lastdate= new Date(lastupdate*1000);
   var blockentry= await App.getInstanceBlockEntry(i);
-
+  console.log(blockentry);
   var price =(await App.getPropPrice(i));
   var area =( await App.getInstancePropArea(i));
 
