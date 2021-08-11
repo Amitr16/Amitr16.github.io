@@ -63,7 +63,7 @@ async function main() {
 // console.log((await contract.getInstanceAddress(0)));
 
 contract.on(filter, (add,id,status) => {
-   console.log("contract has change"+id);
+   console.log("contract has changed "+id);
    var tempstor=JSON.parse(localStorage.getItem('FullProp'));
    tempstor[id].State=status.toNumber();
    localStorage.setItem('FullProp', JSON.stringify(tempstor));

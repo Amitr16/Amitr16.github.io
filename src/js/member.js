@@ -25,7 +25,7 @@ async function ShowPropDetails(){
  var lenlawyer=0;
 
 
-for (var i=13; i<await App.GetPropCount() ;i++){
+for (var i=15; i<await App.GetPropCount() ;i++){
 
   var state = await App.getPropState(i);
   console.log(state)
