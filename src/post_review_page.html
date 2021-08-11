@@ -187,6 +187,10 @@
 			  <td><label for="size">Floor Size (sqft):</label></td>
 			  <td> <type="number" id="size" name="size"></td>
             </tr>
+            <tr>
+              <td><label for="built">Year of construction:</label></td>
+              <td> <type="text" id="built" name="built"></td>
+            </tr>
 
             <tr>
               <td><label for="tenure">Tenure (yrs):</label></td>
@@ -274,15 +278,18 @@
 	document.getElementById("size").innerHTML = input10;
 	temp = parameters[10].split("=");
     input11 = unescape(temp[1]);
-	document.getElementById("tenure").innerHTML = input11;
+	document.getElementById("built").innerHTML = input11;
 	temp = parameters[11].split("=");
-    input12= unescape(temp[1]);
-	document.getElementById("price").innerHTML = input12;
+    input12 = unescape(temp[1]);
+	document.getElementById("tenure").innerHTML = input12;
 	temp = parameters[12].split("=");
-    input13 = unescape(temp[1]);
-	var input13formatted = input13.split('+').join(' ');
-	document.getElementById("lawyer").name = input13formatted;
-  document.getElementById("lawyer").innerHTML = input13formatted.split(" ")[2];
+    input13= unescape(temp[1]);
+	document.getElementById("price").innerHTML = input13;
+	temp = parameters[13].split("=");
+    input14 = unescape(temp[1]);
+	var input14formatted = input14.split('+').join(' ');
+	document.getElementById("lawyer").name = input14formatted;
+  document.getElementById("lawyer").innerHTML = input14formatted.split(" ")[2];
   }
   processUser();
 

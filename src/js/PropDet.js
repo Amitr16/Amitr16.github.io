@@ -30,13 +30,14 @@ ShowItemDetails();
   var url1 = blkentry.split("%")[4];
   var url2 = blkentry.split("%")[5];
   var url3 = blkentry.split("%")[6];
+  var built =blkentry.split("%")[9];
   console.log(PropAddress);
   var strDet=document.getElementById("datatable").innerHTML;
   var strDet2 =document.getElementById("mybtn").innerHTML;
 
   var strDet1 =document.getElementById("carouselExampleFade").innerHTML;
  
-  document.getElementById("datatable").innerHTML=strDet.replace("yyy",proptypes[PropType]).replace("xxx",PropAddress).replace("zzz","D"+district).replace("uuu",Pin).replace("hhh",price).replace("aaa",accotype[acco-1]).replace("bbb",area).replace("ccc",tenure);
+  document.getElementById("datatable").innerHTML=strDet.replace("yyy",proptypes[PropType]).replace("xxx",PropAddress).replace("zzz","D"+district).replace("uuu",Pin).replace("hhh",price).replace("aaa",accotype[acco-1]).replace("bbb",area).replace("ccc",tenure).replace("ppp",built);
   document.getElementById("carouselExampleFade").innerHTML =strDet1.replace("ddd",url1).replace("eee",url2).replace("fff",url3);
   document.getElementById("mybtn").innerHTML=strDet2.replace("kkk",i);
 

@@ -115,13 +115,14 @@ async function addProperty(){
     var email=(document.getElementById("email").innerHTML);
     var contact =(document.getElementById("contact").innerHTML);
     var city=(document.getElementById("city").innerHTML);
+    var built=(document.getElementById("built").innerHTML);
     var tenure=(document.getElementById("tenure").innerHTML);
     var multihash =JSON.parse(localStorage.getItem('IPFSProp'));
 
     var Name=(document.getElementById("sellername").innerHTML);
     var NRIC=(document.getElementById("nricfin").innerHTML);
 
-    var blockentry = email +"%"+contact +"%"+city +"%"+tenure+"%"+multihash[0]+"%"+multihash[1]+"%"+multihash[2] +"%"+Name +"%"+NRIC;
+    var blockentry = email +"%"+contact +"%"+city +"%"+tenure+"%"+multihash[0]+"%"+multihash[1]+"%"+multihash[2] +"%"+Name +"%"+NRIC+"%"+built;
    
    
     // var distr= document.getElementById("distr").value;

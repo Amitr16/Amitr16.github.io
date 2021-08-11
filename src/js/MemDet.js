@@ -45,6 +45,7 @@ ShowItemDetails();
   var url3 = blkentry.split("%")[6];
   var uname = blkentry.split("%")[7];
   var unric = blkentry.split("%")[8];
+  var built = blkentry.split("%")[9];
   var d1=await App.getOTPDeadline(i);
  var otpdate = new Date(d1);
  var finaldate =new Date(await App.getFinalPaymentDeadline(i));     
@@ -53,7 +54,7 @@ ShowItemDetails();
   var strDet2 =document.getElementById("note").innerHTML;
   var strDet1 =document.getElementById("carouselExampleFade").innerHTML;
   
-  document.getElementById("datatable").innerHTML=strDet.replace("yyy",proptypes[PropType]).replace("xxx",PropAddress).replace("zzz","D"+district).replace("uuu",Pin).replace("hhh",price).replace("aaa",accotype[acco-1]).replace("bbb",area).replace("ccc",tenure).replace("qqq",offername).replace("ttt",offerpx).replace("sss",offerphone).replace("mmm",offeremail).replace("fff",unric).replace("rrr",offercomm);
+  document.getElementById("datatable").innerHTML=strDet.replace("yyy",proptypes[PropType]).replace("xxx",PropAddress).replace("zzz","D"+district).replace("uuu",Pin).replace("hhh",price).replace("aaa",accotype[acco-1]).replace("bbb",area).replace("ccc",tenure).replace("qqq",offername).replace("ttt",offerpx).replace("sss",offerphone).replace("mmm",offeremail).replace("fff",unric).replace("rrr",offercomm).replace("ppp",built);
   if (d1==0)
    document.getElementById("note").innerHTML="";
   else
