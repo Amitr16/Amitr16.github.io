@@ -23,7 +23,7 @@ async function ShowPropDetails(){
 var FullDetails = JSON.parse(localStorage.getItem('FullProp'));
 var detaillen =0;
 
-for (var i=0; i<await App.GetPropCount() ;i++){
+for (var i=18; i<await App.GetPropCount() ;i++){
 
 // console.log(FullDetails);
 
@@ -156,7 +156,7 @@ async function GetFilteredView(){
 
 
 
-for (var i=0; i<await App.GetPropCount() ;i++){
+for (var i=18; i<await App.GetPropCount() ;i++){
 
   var state = FullDetails[i].State;
   var PropType =FullDetails[i].PropType;
