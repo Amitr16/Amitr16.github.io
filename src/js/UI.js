@@ -207,15 +207,15 @@ for (var i=0; i<await App.GetPropCount() ;i++){
 window.ShowInterest = async function(index)
 {
 
-var email =document.getElementById("form_email").value;
-var offerpx =document.getElementById("form_offer").value;
-var mobile=document.getElementById("form_mobile").value;
-var name =document.getElementById("form_name").value;
+var email =document.getElementById("form_email"+index).value;
+var offerpx =document.getElementById("form_offer"+index).value;
+var mobile=document.getElementById("form_mobile"+index).value;
+var name =document.getElementById("form_name"+index).value;
 // var comm = document.getElementById("form_view").value;
 
 console.log(index)
 // console.log(document.getElementById("PropDet").innerHTML)
-console.log(mobile)
+console.log(offerpx)
 console.log(name)
 var comm ="";
 var blkoffer = offerpx+"%"+name+"%"+mobile+"%"+email+"%"+comm;
