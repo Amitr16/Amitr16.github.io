@@ -23,7 +23,7 @@ async function ShowPropDetails(){
 var FullDetails = JSON.parse(localStorage.getItem('FullProp'));
 var detaillen =0;
 
-for (var i=18; i<await App.GetPropCount() ;i++){
+for (var i=0; i<await App.GetPropCount() ;i++){
 
 // console.log(FullDetails);
 
@@ -104,7 +104,7 @@ else{
   continue;
 
 }
-    document.getElementById("PropDet").innerHTML+= strDet.replace("xxx",locout).replace("yyy",district).replace("zzz",price1).replace("aaa",accotype[acco-1]).replace("bbb",area1).replace("ccc",psf).replace("ddd",i).replace("jjj",url).replace("ppp",i).replace("nnn",proptypes[PropType]);
+    document.getElementById("PropDet").innerHTML+= strDet.replace("xxx",locout).replace("yyy",district).replace("zzz",price1).replace("aaa",accotype[acco-1]).replace("bbb",area1).replace("ccc",psf).replace("ddd",i).replace("jjj",url).replace("ppp",i).replace("nnn",proptypes[PropType]).replaceAll("sss",i);
     // console.log(document.getElementById("PropDet").innerHTML)
 
 }
@@ -156,7 +156,7 @@ async function GetFilteredView(){
 
 
 
-for (var i=18; i<await App.GetPropCount() ;i++){
+for (var i=0; i<await App.GetPropCount() ;i++){
 
   var state = FullDetails[i].State;
   var PropType =FullDetails[i].PropType;
@@ -182,7 +182,7 @@ for (var i=18; i<await App.GetPropCount() ;i++){
   var psf = price/area;
   var url = blockentry.split("%")[4];
   // console.log(document.getElementById("PropDet").innerHTML);
-    document.getElementById("PropDet").innerHTML+= strDet1.replace("xxx",locout).replace("yyy",district).replace("zzz",px).replace("aaa",accotype[acco-1]).replace("bbb",area).replace("ccc",psf).replace("ddd",i).replace("jjj",url).replace("ppp",i).replace("nnn",proptypes[PropType]);
+    document.getElementById("PropDet").innerHTML+= strDet1.replace("xxx",locout).replace("yyy",district).replace("zzz",px).replace("aaa",accotype[acco-1]).replace("bbb",area).replace("ccc",psf).replace("ddd",i).replace("jjj",url).replace("ppp",i).replace("nnn",proptypes[PropType]).replaceAll("sss",i);
     console.log(strDet1);
 
 }
@@ -212,18 +212,23 @@ var offerpx =document.getElementById("form_offer").value;
 var mobile=document.getElementById("form_mobile").value;
 var name =document.getElementById("form_name").value;
 // var comm = document.getElementById("form_view").value;
+
 console.log(index)
-console.log(offerpx)
+// console.log(document.getElementById("PropDet").innerHTML)
 console.log(mobile)
 console.log(name)
 var comm ="";
 var blkoffer = offerpx+"%"+name+"%"+mobile+"%"+email+"%"+comm;
 // alert(blkoffer);
-await App.ShowInterest(index+1,blkoffer,offerpx);
+
+await App.ShowInterest(index,blkoffer,offerpx);
+
 window.location.href = "purchase_property.html";
 }
 $("body").keypress(function(e){
-  if(e.which==114)
+  
+  if(e.which==114){
+  
    cleancache();
-   window.location.href = "purchase_property.html";
+   window.location.href = "purchase_property.html";}
 })
