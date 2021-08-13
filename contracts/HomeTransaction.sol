@@ -80,7 +80,7 @@ contract HomeTransaction {
         
     }
 
-       function buyerShowsInterest(address addbuy ,string memory blockkoffer, uint offerpx) public  {
+       function buyerShowsInterest(address addbuy ,string memory blockkoffer, uint offerpx,address Lawyer) public  {
         
 
         require(contractState == ContractState.WaitingBuyerInterest, "Wrong contract state");
@@ -89,6 +89,7 @@ contract HomeTransaction {
         buyer=addbuy; //setting buyer address
         blkoffer=blockkoffer;
         offerprice = offerpx;
+        Agent=Lawyer;
         lastOperationTime=now;
     }
     function sellerSignContract() public payable {

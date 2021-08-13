@@ -66,7 +66,7 @@
             <a class="nav-link" href="purchase_property.html">Purchase Property</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="member.html">Members</a>
+            <a class="nav-link" href="member.html">My Page</a>
           </li>
 
           <li class="nav-item">
@@ -188,7 +188,7 @@
 			  <td> <type="number" id="size" name="size"></td>
             </tr>
             <tr>
-              <td><label for="built">Year of construction:</label></td>
+              <td><label for="built">Year of Construction:</label></td>
               <td> <type="text" id="built" name="built"></td>
             </tr>
 
@@ -280,7 +280,7 @@
     input11 = unescape(temp[1]);
 	document.getElementById("built").innerHTML = input11;
 	temp = parameters[11].split("=");
-    input12 = unescape(temp[1]);
+    input12 = unescape(temp[1]).split('+').join(' ');
 	document.getElementById("tenure").innerHTML = input12;
 	temp = parameters[12].split("=");
     input13= unescape(temp[1]);

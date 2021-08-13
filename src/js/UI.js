@@ -211,6 +211,8 @@ var email =document.getElementById("form_email"+index).value;
 var offerpx =document.getElementById("form_offer"+index).value;
 var mobile=document.getElementById("form_mobile"+index).value;
 var name =document.getElementById("form_name"+index).value;
+var Layweradd =document.getElementById("form_lawyer"+index).value.split(" ")[0];
+// alert(Layweradd.split(" ")[0])
 // var comm = document.getElementById("form_view").value;
 
 console.log(index)
@@ -221,7 +223,7 @@ var comm ="";
 var blkoffer = offerpx+"%"+name+"%"+mobile+"%"+email+"%"+comm;
 // alert(blkoffer);
 
-await App.ShowInterest(index,blkoffer,offerpx);
+await App.ShowInterest(index,blkoffer,offerpx,Layweradd);
 
 window.location.href = "purchase_property.html";
 }
