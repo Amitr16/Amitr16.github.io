@@ -14,7 +14,7 @@ var account = 0;
 var Token1=0;
 async function main() {
   // 0xF6258304D8D4e798b9AeB47BE63Fc57687F2B7B4
-  const contractName = "0x75d1F5FA6F6D395c08d1B49731c121E2F386b9D1"   //property contract
+  const contractName = "0xB7fB6204edAF9f2c446898D6075ac34F17c90130"   //property contract
   const TokenName = "0x1484a6020A0F08400F6f56715016d2C80e26cDC1" // USDT contract on Metamask, same as contract
   try{
     const provider = await new ethers.providers.Web3Provider(window.ethereum);
