@@ -20,7 +20,7 @@ ShowItemDetails();
   var firsttwo =String(FullDetails[i].Pin).slice(0,2);
 
   var  district = DistID[firsttwo-1];
-  var price =numberWithCommas(FullDetails[i].Price);
+  var price =numberWithCommas(await App.getPropPrice(i));
   var Pin =FullDetails[i].Pin;
   var PropAddress=FullDetails[i].Location;
   var area = numberWithCommas(FullDetails[i].Area);
