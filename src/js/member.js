@@ -25,7 +25,7 @@ async function ShowPropDetails(){
  var lenlawyer=0;
 
 
-for (var i=0; i<await App.GetPropCount() ;i++){
+for (var i=6; i<await App.GetPropCount() ;i++){
 
   var state = await App.getPropState(i);
   console.log(state)
@@ -59,9 +59,12 @@ for (var i=0; i<await App.GetPropCount() ;i++){
   var lawyerAdd=await App.getPropAgentAddress(i);
   var url = blockentry.split("%")[4];
   var rejection = "disabled";
+  console.log(BuyerAdd);
+  console.log(WalletAdd)
   if(state==0 && SellerAdd!=WalletAdd )
   continue;
   if(BuyerAdd==WalletAdd){
+    
     if (state <6 && state>1)
     rejection="enabled";
     if (lenbuyer==0){
@@ -71,9 +74,11 @@ for (var i=0; i<await App.GetPropCount() ;i++){
     
     if (!(state==2||state==3||state==5))
     {
+      
       strbuyer+=document.getElementById("myfields").innerHTML.replace("bbb",arrStatus[state]).replace("ccc",locout).replace("ddd",pin).replace("eee",proptypes[PropType]).replace("jjj",url).replaceAll("xxx",i).replaceAll("yyy",state).replaceAll("rrr","disabled").replaceAll("sss",rejection);
     } 
     else{
+      
       strbuyer+=document.getElementById("myfields").innerHTML.replace("bbb",arrStatus[state]).replace("ccc",locout).replace("ddd",pin).replace("eee",proptypes[PropType]).replace("jjj",url).replaceAll("xxx",i).replaceAll("yyy",state).replaceAll("sss",rejection);
     }
   }
